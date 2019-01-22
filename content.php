@@ -11,7 +11,7 @@
     <div class="post-content-inner">
       <?php $value = get_post_meta($post->ID, '_intro_text_meta_key', true);
       if(!empty($value)){
-        echo '<h3>' . $value . '<h3>';
+        echo '<h3>' . $value . '</h3>';
       }?>
         <?php if( has_post_thumbnail() ): ?>
             <div class="post-thumbnail">
