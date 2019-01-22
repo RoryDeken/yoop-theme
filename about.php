@@ -20,38 +20,8 @@ if( !business_gravity_get_option( 'disable_about' ) ):
 	?>
 	<!-- About Section -->
 	<section class="wrapper block-about">
-    CUSTOM OVERRIDE
-		<div class="thumb-block-outer">
-			<div class="row align-items-center">
-				<div class="col-md-6 pad0lr">
-					<div class="thumb-outer">
-						<div class="thumb-inner">
-							<?php the_post_thumbnail( 'business-gravity-1170-710' ); ?>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 pad0lr">
-					<div class="content-outer">
-						<div class="section-title-group">
-							<h2 class="section-title">
-								<?php the_title(); ?>
-							</h2>
-							<span>
-								<?php if( get_edit_post_link()){
-									business_gravity_edit_link();
-								} ?>
-							</span>
-						</div>
-						<?php business_gravity_excerpt(40); ?>
-						<div class="button-container">
-							<a href="<?php the_permalink(); ?>" class="button-primary">
-								<?php esc_html_e( 'View More', 'business-gravity' ); ?>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+			<?php echo get_the_content(); ?>
+
 	</section> <!-- End About Section -->
 	<?php
 		endwhile;
